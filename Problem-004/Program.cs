@@ -18,26 +18,17 @@ namespace Problem_004
                 for (int j = 100; j < 1000; j++)
                 {
                     int product = i*j;
-                    string s = product.ToString();
+                    string productAsString = product.ToString();
+                    
+                    char[] productReversed = productAsString.ToCharArray();
+                    Array.Reverse(productReversed);
 
-                    if (product < 100000)
+                    if (productAsString.Equals(new string(productReversed)))
                     {
-                        // 5 digit pallindrome
-                        if ((s[0] == s[4]) && (s[1] == s[3]))
-                        {
-                            if (product > largest)
-                                largest = product;
-                        }
+                        if (product > largest)
+                            largest = product;
                     }
-                    else
-                    {
-                        // 6 digit pallindrome
-                        if ((s[0] == s[5]) && (s[1] == s[4]) && (s[2] == s[3]))
-                        {
-                            if (product > largest)
-                                largest = product;
-                        }
-                    }
+
                 }
             }
 

@@ -1,10 +1,13 @@
 ﻿using System;
+using NUnit.Framework;
 
-namespace Problem_004
+namespace Problems
 {
-    internal class Program
+    [TestFixture]
+    public class Problem004
     {
-        private static void Main()
+        [Test]
+        public void Test()
         {
             // A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 99.
             // Find the largest palindrome made from the product of two 3-digit numbers.
@@ -17,9 +20,9 @@ namespace Problem_004
             {
                 for (int j = 100; j < 1000; j++)
                 {
-                    int product = i*j;
+                    int product = i * j;
                     string productAsString = product.ToString();
-                    
+
                     char[] productReversed = productAsString.ToCharArray();
                     Array.Reverse(productReversed);
 
@@ -32,8 +35,7 @@ namespace Problem_004
                 }
             }
 
-            Console.Out.WriteLine(largest);
-            Console.ReadLine();
+            Assert.Inconclusive(largest.ToString());
         }
     }
 }

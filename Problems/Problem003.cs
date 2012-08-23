@@ -1,10 +1,12 @@
-﻿using System;
+﻿using NUnit.Framework;
 
-namespace Problem_003
+namespace Problems
 {
-    internal class Program
+    [TestFixture]
+    public class Problem003
     {
-        private static void Main()
+        [Test]
+        public void Test()
         {
             // The prime factors of 13195 are 5, 7, 13 and 29.
             // What is the largest prime factor of the number 600851475143 ?
@@ -15,7 +17,7 @@ namespace Problem_003
             long goal = 600851475143;
             while (i++ != goal)
             {
-                if (goal%i != 0) continue;
+                if (goal % i != 0) continue;
                 if (i <= maxPrimeFactor) continue;
 
                 // Found the current largest prime factor.
@@ -24,8 +26,8 @@ namespace Problem_003
                 i = 0;
             }
 
-            Console.Out.WriteLine(maxPrimeFactor);
-            Console.ReadLine();
+            Assert.Inconclusive(maxPrimeFactor.ToString());
         }
+         
     }
 }

@@ -36,8 +36,10 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="NumberToWordsConverter.cs" />
     <Compile Include="Problem007.cs" />
     <Compile Include="Problem006.cs" />
     <Compile Include="Problem001.cs" />
@@ -45,10 +47,26 @@
     <Compile Include="Problem003.cs" />
     <Compile Include="Problem004.cs" />
     <Compile Include="Problem005.cs" />
+    <Compile Include="Problem012.cs" />
+    <Compile Include="Problem013.cs" />
+    <Compile Include="Problem014.cs" />
+    <Compile Include="Problem015.cs" />
+    <Compile Include="Problem016.cs" />
+    <Compile Include="Problem017.cs" />
+    <Compile Include="Problem018.cs" />
+    <Compile Include="Problem067.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tree.cs" />
+    <Compile Include="TreeSolver.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Problem018tree.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Problem067tree.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
